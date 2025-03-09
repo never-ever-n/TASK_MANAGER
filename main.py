@@ -19,6 +19,23 @@ def save_tasks(tasks):
     """Save tasks to JSON file."""
     with open(TASK_FILE, "w") as file:
         json.dump(tasks, file, indent=4)
+def add_task():
+    """Add a new task."""
+    title = title_entry.get()
+    description = description_entry.get()
+    priority = priority_var.get()
+
+    if not title or not description:
+        messagebox.showerror("Error", "Title and description cannot be empty!")
+        return
+
+    tasks = load_tasks()
+    task = {"id": len(tasks) + 1, "title": title, "description": description, "completed": False, "priority": priority}
+    tasks.append(task)
+    save_tasks(tasks)
+    title_entry.delete(0, ttk.END)
+    description_entry.delete(0, ttk.END)
+    update_task_list()
 def update_task_list():
     """Update the displayed tasks."""
     task_list.delete(*task_list.get_children())  # Clear treeview
