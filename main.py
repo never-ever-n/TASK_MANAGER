@@ -5,7 +5,20 @@ from ttkbootstrap.constants import *
 from tkinter import messagebox
 TASK_FILE = "tasks.json"
 
+def load_tasks():
+    """Load tasks from JSON file safely."""
+    if not os.path.exists(TASK_FILE) or os.stat(TASK_FILE).st_size == 0:
+        return []
+    try:
+        with open(TASK_FILE, "r") as file:
+            return json.load(file)
+    except json.JSONDecodeError:
+        return []
 
+def save_tasks(tasks):
+    """Save tasks to JSON file."""
+    with open(TASK_FILE, "w") as file:
+        json.dump(tasks, file, indent=4)
 def add_task():
     """Add a new task."""
     title = title_entry.get()
@@ -23,21 +36,6 @@ def add_task():
     title_entry.delete(0, ttk.END)
     description_entry.delete(0, ttk.END)
     update_task_list()
-
-def load_tasks():
-    """Load tasks from JSON file safely."""
-    if not os.path.exists(TASK_FILE) or os.stat(TASK_FILE).st_size == 0:
-        return []
-    try:
-        with open(TASK_FILE, "r") as file:
-            return json.load(file)
-    except json.JSONDecodeError:
-        return []
-
-def save_tasks(tasks):
-    """Save tasks to JSON file."""
-    with open(TASK_FILE, "w") as file:
-        json.dump(tasks, file, indent=4)
 def update_task_list():
     """Update the displayed tasks."""
     task_list.delete(*task_list.get_children())  # Clear treeview
