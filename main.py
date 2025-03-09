@@ -1,5 +1,13 @@
+import json
+import os
+import ttkbootstrap as ttk
 
-def save_tasks(tasks):
-    """Save tasks to JSON file."""
-    with open(TASK_FILE, "w") as file:
-        json.dump(tasks, file, indent=4)
+def update_task_list():
+    """Update the displayed tasks."""
+    task_list.delete(*task_list.get_children())  # Clear treeview
+    tasks = load_tasks()
+    for task in tasks:
+        status = "✔" if task["completed"] else "✖"
+        task_list.insert("", "end", values=(task['id'], status, task['title'], task['description'], task['priority']))
+
+
