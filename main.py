@@ -14,6 +14,11 @@ def load_tasks():
             return json.load(file)
     except json.JSONDecodeError:
         return []
+
+def save_tasks(tasks):
+    """Save tasks to JSON file."""
+    with open(TASK_FILE, "w") as file:
+        json.dump(tasks, file, indent=4)
 def update_task_list():
     """Update the displayed tasks."""
     task_list.delete(*task_list.get_children())  # Clear treeview
@@ -99,4 +104,3 @@ update_task_list()
 
 
 root.mainloop()
-
