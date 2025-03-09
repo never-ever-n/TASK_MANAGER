@@ -5,6 +5,7 @@ from ttkbootstrap.constants import *
 from tkinter import messagebox
 TASK_FILE = "tasks.json"
 
+
 def add_task():
     """Add a new task."""
     title = title_entry.get()
