@@ -51,10 +51,10 @@ Download or clone the task_tracker.py file and run:
 python task_tracker.py
 <br>
 <hr>
-How to Use
+How to Use:
 <br>
 <br>
-Adding a Task
+✅Adding a Task
 <br>
 <br>
 1. Enter a Task Title and Description.
@@ -64,7 +64,7 @@ Adding a Task
 3. Click the "Add Task" button.
 <br>
 <hr>
-Marking a Task as Complete
+✅Marking a Task as Complete
 <br>
 <br>
 1. Select a task from the list.
@@ -74,7 +74,7 @@ Marking a Task as Complete
 3. The task's status will change to ✔.
 <br>
 <hr>
-Deleting a Task
+✅Deleting a Task
 <br>
 <br>
 1. Select a task from the list.
