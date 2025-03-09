@@ -18,6 +18,7 @@ A modern Task Tracker application built using Python, Tkinter, and ttkbootstrap 
 <hr>
 Features
 <br>
+<br>
 Modern UI: Uses ttkbootstrap for a better-looking interface.
 <br>
 Task Prioritization: Assign priorities like Low, Medium, or High.
@@ -31,6 +32,7 @@ Responsive Buttons: Buttons with different styles for adding, marking complete, 
 <br>
 <hr>
 Installation & Setup
+<br>
 <br>
 1. Install Python (if not installed)
 <br>
@@ -51,7 +53,9 @@ python task_tracker.py
 <hr>
 How to Use
 <br>
+<br>
 Adding a Task
+<br>
 <br>
 1. Enter a Task Title and Description.
 <br>
@@ -62,6 +66,7 @@ Adding a Task
 <hr>
 Marking a Task as Complete
 <br>
+<br>
 1. Select a task from the list.
 <br>
 2. Click the "Mark Complete" button.
@@ -71,6 +76,7 @@ Marking a Task as Complete
 <hr>
 Deleting a Task
 <br>
+<br>
 1. Select a task from the list.
 <br>
 <br>
@@ -78,6 +84,7 @@ Deleting a Task
 <br>
 <hr>
 Project Structure
+<br>
 <br>
 task_tracker/
 <br>
@@ -89,6 +96,7 @@ task_tracker/
 <br>
 <hr>
 Customization
+<br>
 <br>
 Change the theme by modifying this line in task_tracker.py:
 <br>
@@ -104,6 +112,7 @@ To reset all tasks, delete tasks.json and restart the app.
 <br>
 <hr>
 License
+<br>
 <br>
 This project is open-source. Feel free to modify and use it as needed!
 <br>
